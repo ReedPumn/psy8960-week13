@@ -34,3 +34,6 @@ dbGetQuery(con, "SELECT performance_group, AVG(yrs_employed), STDDEV(yrs_employe
            GROUP BY performance_group;")
 
 # Display the location and ID numbers of the top 3 managers from each location, in alphabetical order by location and then descending order of test score. If there are ties, include everyone reaching rank 3.
+dbGetQuery(con, "SELECT city, employee_id, test_score
+           FROM cla_tntlab.datascience_8960_table
+           ORDER BY city DESC, test_score DESC")
