@@ -30,5 +30,7 @@ week13_tbl %>%
 
 # Display the average and standard deviation of number of years of employment split by performance level (bottom, middle, and top).
 week13_tbl %>%
+  group_by(performance_group) %>%
+  summarize(mean = mean(yrs_employed), sd = sd(yrs_employed))
 
 # Display the location and ID numbers of the top 3 managers from each location, in alphabetical order by location and then descending order of test score. If there are ties, include everyone reaching rank 3.
